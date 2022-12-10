@@ -6,11 +6,11 @@ function Counter() {
 
     useEffect(() => {
         console.log('UseEffect');
-        setInterval(() => {
-            
-            setNumber((n)=> n+1)
+     const interval=setInterval(() => {
+            setNumber((n) => n + 1)
+        }, 1000)
 
-        },1000)
+        return ()=> clearInterval(interval) 
     }, [])
 
     useEffect(() => {
@@ -19,7 +19,7 @@ function Counter() {
     return (
         <div>
             {number}
-
+            <br />
             <button onClick={() => setNumber(number + 1)} >Click</button>
 
         </div>

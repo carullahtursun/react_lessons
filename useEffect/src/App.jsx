@@ -1,20 +1,20 @@
 
 import Counter from './components/Counter';
-import { useState ,useEffect} from 'react';
+import { useState, useEffect } from 'react';
 
 function App() {
-  
 
-  const [isNumber,setNumber]=useState(true);
+
+  const [isNumber, setNumber] = useState(true);
 
   return (
     <div className="App">
 
-    {isNumber &&<Counter/> }
-      
+      {isNumber && <Counter />}
+
       <br />
 
-      <button onClick={()=>setNumber(!isNumber)} >clear</button>
+      <button onClick={() => setNumber(!isNumber)} >Toggle Counter</button>
     </div>
   );
 }
