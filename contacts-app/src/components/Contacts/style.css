@@ -1,0 +1,55 @@
+#container{
+    background-color: rgb(181, 193, 193);
+    width: 400px;
+    padding: 20px;
+    border-radius: 9px;
+}
+#input{
+    width: 100%;
+    padding: 10px;
+    margin-top: 3px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border-radius: 5px;
+}
+ul ,li{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    
+}
+
+.text{
+    text-decoration-line: line-through;
+    color: rgb(138, 143, 147);
+}
+
+.list{
+    background-color: bisque;
+    margin: 3px;
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content:space-between ;
+}
+#button{
+    width: 100%;
+    background-color: blue;
+    color: white;
+    padding: 5px;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+
+#contacts{
+    display: flex;
+    justify-content: center;
+    
+  
+}
+p{
+    margin: 0;
+
+}
