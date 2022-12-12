@@ -1,0 +1,115 @@
+ const {handleSubmit,handleChange,values} = useFormik({
+    initialValues: {
+      firstName: 'ahmet',
+          lastName: 'turan',
+          email: 'ahmet.t@gmail.com',
+          gender: 'male',
+          hobies:[],
+          cuontry:'TR',
+    },
+    onSubmit: values => {
+      console.log(values);
+    },
+  });
+  return (
+    <div className="App">
+      <h1>Sign Up</h1>
+      <Formik>
+        
+
+            <Form onSubmit={handleSubmit}>
+              <label htmlFor="firstName">First Name</label>
+              <input
+                value={values.firstName}
+                id="firstName"
+                name="firstName"
+                onChange={handleChange}
+                placeholder="Jane" />
+
+              <br />
+
+              <label htmlFor="lastName">Last Name</label>
+              <input
+                value={values.lastName}
+                id="lastName"
+                name="lastName"
+                onChange={handleChange}
+                placeholder="Doe" />
+
+              <br />
+
+              <label htmlFor="email">Email </label>
+              <input
+                value={values.email}
+                onChange={handleChange}
+                id="email"
+                name="email"
+                placeholder="jane@acme.com"
+                type="email"
+              />
+              <br />
+              <br />
+
+              <input
+                id="gender"
+                name="gender"
+                onChange={handleChange}
+                value="male"
+                type={'radio'}
+                checked={values.gender === 'male'}
+                />
+                <span>male</span>
+              <input
+                id="gender"
+                name="gender"
+                onChange={handleChange}
+                value="female"
+                checked={values.gender === 'female'}
+                type={'radio'}
+                />
+                <span>female</span>
+
+              <br />
+              <br />
+
+
+              <div>
+                <input type="checkbox"  value={'foto'} name='hobies' onChange={handleChange} />
+              fotograf
+              </div>
+
+              <div>
+                <input type="checkbox" value={'Cinema'}  name='hobies' onChange={handleChange} />
+              Cinema
+              </div>
+
+              <div>
+                <input type="checkbox" value={'Football'} name='hobies' onChange={handleChange} />
+              Football
+              </div>
+              
+              <br />
+             
+              
+
+            <select name="cuontry" id="cuontry" onChange={handleChange}>
+            <option value="TR">Türkiye</option>
+            <option value="USA">USA</option>
+            <option value="EN">England</option>
+            </select>
+
+              <br />
+              <br />
+
+              <button type="submit">Submit</button>
+              <br />
+              <br />
+              {
+                <code>{JSON.stringify(values)}</code>
+              }
+            </Form>
+          
+      </Formik>
+    </div>
+  );
+}
